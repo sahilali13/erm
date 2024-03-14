@@ -1,6 +1,6 @@
 function __vite__mapDeps(indexes) {
   if (!__vite__mapDeps.viteFileDeps) {
-    __vite__mapDeps.viteFileDeps = ["assets/ProductsManagement-CUNXCvXC.js","assets/index-Dwc73Apg.js","assets/TableWidgets-NpcmZx65.js","assets/OrdersManagement-Cr4G7sH_.js","assets/OrdersManagement-DZ3sMOV9.css","assets/Dashboard-RwlugZGS.js"]
+    __vite__mapDeps.viteFileDeps = ["assets/ProductsManagement-UIC7CyQ7.js","assets/index-Ceixq1Pc.js","assets/TableWidgets-25zdHFen.js","assets/OrdersManagement-CIQVQ_dk.js","assets/OrdersManagement-DZ3sMOV9.css","assets/Dashboard-DecpAyjc.js"]
   }
   return indexes.map((i) => __vite__mapDeps.viteFileDeps[i])
 }
@@ -153,4 +153,4 @@ to {
   animation: ${O1} 2.5s cubic-bezier(0.35, 0.04, 0.63, 0.95) infinite;
 `;cn.svg`
   transform-origin: 50% 65%;
-`;function I1(){return L.jsx("div",{className:"flex justify-center items-center h-screen m-auto",children:L.jsx($1,{type:"Oval",color:"#0D42EC",height:80,width:80})})}const j1=_.lazy(()=>cs(()=>import("./ProductsManagement-CUNXCvXC.js"),__vite__mapDeps([0,1,2]))),M1=_.lazy(()=>cs(()=>import("./OrdersManagement-Cr4G7sH_.js"),__vite__mapDeps([3,2,1,4]))),D1=_.lazy(()=>cs(()=>import("./Dashboard-RwlugZGS.js"),__vite__mapDeps([5,1])));function F1(){return L.jsxs(k0,{children:[L.jsx(_0,{}),L.jsx(_.Suspense,{fallback:L.jsx(I1,{}),children:L.jsxs(h0,{children:[L.jsx(Nl,{path:"/",element:L.jsx(D1,{})}),L.jsx(Nl,{path:"/products-management",element:L.jsx(j1,{})}),L.jsx(Nl,{path:"/orders-management",element:L.jsx(M1,{})})]})})]})}di.createRoot(document.getElementById("root")).render(L.jsx(qt.StrictMode,{children:L.jsx(F1,{})}));export{W1 as M,qt as R,A1 as a,B1 as b,U1 as c,qa as g,L as j,_ as r};
+`;function I1(){return L.jsx("div",{className:"flex justify-center items-center h-[90vh] max-w-screen ",children:L.jsx($1,{type:"Oval",color:"#0D42EC",height:100,width:100})})}const j1=_.lazy(()=>cs(()=>import("./ProductsManagement-UIC7CyQ7.js"),__vite__mapDeps([0,1,2]))),M1=_.lazy(()=>cs(()=>import("./OrdersManagement-CIQVQ_dk.js"),__vite__mapDeps([3,2,1,4]))),D1=_.lazy(()=>cs(()=>import("./Dashboard-DecpAyjc.js"),__vite__mapDeps([5,1])));function F1(){return L.jsxs(k0,{children:[L.jsx(_0,{}),L.jsx(_.Suspense,{fallback:L.jsx(I1,{}),children:L.jsxs(h0,{children:[L.jsx(Nl,{path:"/",element:L.jsx(D1,{})}),L.jsx(Nl,{path:"/products-management",element:L.jsx(j1,{})}),L.jsx(Nl,{path:"/orders-management",element:L.jsx(M1,{})})]})})]})}di.createRoot(document.getElementById("root")).render(L.jsx(qt.StrictMode,{children:L.jsx(F1,{})}));export{W1 as M,qt as R,A1 as a,B1 as b,U1 as c,qa as g,L as j,_ as r};
