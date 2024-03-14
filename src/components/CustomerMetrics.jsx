@@ -32,14 +32,12 @@ ChartJS.register(
 export default function CustomerMetrics({ showGraph }) {
 	const orders = INITIAL_ORDERS;
 
-	const [CUSTOMERSpending, setCUSTOMERSpending] = useState(
-		getSortedCUSTOMERSpending()
-	);
+	const customerSpending = getSortedcustomerSpending();
 
-	const topThreeCUSTOMERS = getTopThreeCUSTOMERS(CUSTOMERSpending);
-	const totalCUSTOMERS = CUSTOMERS.length;
+	const topThreeCustomers = getTopThreeCustomers(customerSpending);
+	const totalCustomers = CUSTOMERS.length;
 
-	const chartData = getChartData(CUSTOMERSpending);
+	const chartData = getChartData(customerSpending);
 
 	const chartOptions = {
 		maintainAspectRatio: false,
@@ -48,7 +46,7 @@ export default function CustomerMetrics({ showGraph }) {
 			x: {
 				title: {
 					display: true,
-					text: 'CUSTOMERS',
+					text: 'Customers',
 				},
 			},
 			y: {
@@ -67,8 +65,8 @@ export default function CustomerMetrics({ showGraph }) {
 				<div className='grid grid-cols-2 gap-4'>
 					<div className='grid gap-4'>
 						<Metric
-							label='Number of CUSTOMERS'
-							value={totalCUSTOMERS}
+							label='Number of Customers'
+							value={totalCustomers}
 						/>
 						<Metric
 							label='Average Customer Acquisition'
@@ -77,9 +75,9 @@ export default function CustomerMetrics({ showGraph }) {
 					</div>
 					<div>
 						<h2 className='text-lg font-semibold mb-2'>
-							Top CUSTOMERS
+							Top Customers
 						</h2>
-						{topThreeCUSTOMERS.map((customer, index) => (
+						{topThreeCustomers.map((customer, index) => (
 							<p key={index}>
 								{getCustomerName(customer[0], index)}:{' ₹'}
 								{customer[1].toFixed(0)}
@@ -97,29 +95,29 @@ export default function CustomerMetrics({ showGraph }) {
 		/>
 	);
 
-	function getSortedCUSTOMERSpending() {
-		const CUSTOMERSpendMap = new Map();
+	function getSortedcustomerSpending() {
+		const customerSpendMap = new Map();
 
 		orders.forEach((order) => {
 			const customerId = order.customerID;
 			const totalPrice = order.totalPrice;
-			if (CUSTOMERSpendMap.has(customerId)) {
-				CUSTOMERSpendMap.set(
+			if (customerSpendMap.has(customerId)) {
+				customerSpendMap.set(
 					customerId,
-					CUSTOMERSpendMap.get(customerId) + totalPrice
+					customerSpendMap.get(customerId) + totalPrice
 				);
 			} else {
-				CUSTOMERSpendMap.set(customerId, totalPrice);
+				customerSpendMap.set(customerId, totalPrice);
 			}
 		});
 
-		return Array.from(CUSTOMERSpendMap.entries()).sort(
+		return Array.from(customerSpendMap.entries()).sort(
 			(a, b) => b[1] - a[1]
 		);
 	}
 
-	function getTopThreeCUSTOMERS(CUSTOMERSpending) {
-		return CUSTOMERSpending.slice(0, 3);
+	function getTopThreeCustomers(customerSpending) {
+		return customerSpending.slice(0, 3);
 	}
 
 	function getCustomerName(customerId, index) {
@@ -132,21 +130,20 @@ export default function CustomerMetrics({ showGraph }) {
 		return 'Others';
 	}
 
-	function getChartData(CUSTOMERSpending) {
-		const topThreeChartData = CUSTOMERSpending.slice(0, 3).map(
-			([customerId], index) => ({
+	function getChartData(customerSpending) {
+		const topThreeChartData = customerSpending
+			.slice(0, 3)
+			.map(([customerId], index) => ({
 				label: getCustomerName(customerId, index),
-				data: CUSTOMERSpending[index][1],
+				data: customerSpending[index][1],
 				backgroundColor: 'rgba(13, 66, 236, 1)',
 				borderColor: 'rgba(13, 66, 236, 1)',
 				borderWidth: 1,
-			})
-		);
+			}));
 
-		const othersTotalSpend = CUSTOMERSpending.slice(3).reduce(
-			(total, [, totalSpend]) => total + totalSpend,
-			0
-		);
+		const othersTotalSpend = customerSpending
+			.slice(3)
+			.reduce((total, [, totalSpend]) => total + totalSpend, 0);
 
 		const labels = [
 			...topThreeChartData.map((data) => data.label),

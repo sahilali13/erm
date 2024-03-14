@@ -3,14 +3,18 @@ import { MdEdit, MdDeleteForever } from 'react-icons/md';
 import { IoMdEye } from 'react-icons/io';
 
 export function TD({ children }) {
-	return <td className='p-2 text-center'>{children}</td>;
+	return (
+		<td className='p-2 text-center border-solid border-b-2 border-stone-300'>
+			{children}
+		</td>
+	);
 }
 
 export function TH({ handleSort, children }) {
 	const sort = children && children !== '#';
 
 	return (
-		<th className='w-screen text-xl sticky top-0 z-auto bg-stone-200 h-16'>
+		<th className='w-screen text-xl sticky top-0 z-auto bg-stone-300 h-16'>
 			<div className='flex justify-center'>
 				{children}
 				{sort && (

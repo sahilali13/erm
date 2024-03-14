@@ -1,6 +1,6 @@
 import { INITIAL_ORDERS, INITIAL_PRODUCTS } from '../assets/Data';
 import { Pie } from 'react-chartjs-2';
-import { Metric, MetricContent } from '../widgets/GeneralWidgets';
+import { MetricContent } from '../widgets/GeneralWidgets';
 import {
 	Chart as ChartJS,
 	CategoryScale,

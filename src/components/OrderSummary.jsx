@@ -35,8 +35,8 @@ export default function OrderSummary({ isOpen, order, onClose }) {
 				open={isOpen}
 				className='fixed z-50 top-0 left-0 right-0 bottom-0 flex justify-center items-center rounded-lg'
 			>
-				<div className='bg-white rounded-lg shadow-lg w-full max-w-lg overflow-hidden'>
-					<div className='modal-content p-4'>
+				<div className='bg-white rounded-lg shadow-lg w-screen max-w-lg overflow-auto'>
+					<div className='modal-content p-4 overflow-h-auto'>
 						<h2 className='text-lg font-bold mb-4'>
 							Order Details
 						</h2>
@@ -84,7 +84,7 @@ export default function OrderSummary({ isOpen, order, onClose }) {
 						</ul>
 						<button
 							onClick={onClose}
-							className='mt-4 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded ml-96'
+							className='mt-4 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded md:ml-96 mx-auto'
 						>
 							Close
 						</button>

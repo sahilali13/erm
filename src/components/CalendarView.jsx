@@ -19,8 +19,8 @@ export default function CalendarView({ orders }) {
 	const startDate = new Date(maxDeliveryDate * 1000);
 
 	return (
-		<div className='flex bg-stone-200 rounded-lg shadow-lg overflow-auto max-h-[83%] min-h-[83%] p-2'>
-			<div className='p-4 bg-stone-100 rounded-lg w-2/3'>
+		<div className='grid grid-rows-3 md:grid-cols-3 md:grid-rows-1 gap-4 bg-stone-200 rounded-lg shadow-lg overflow-auto max-h-[83%] min-h-[83%] p-2'>
+			<div className='p-4 bg-stone-100 rounded-lg row-span-2 md:col-span-2'>
 				<Calendar
 					selectable
 					localizer={localizer}
@@ -35,7 +35,7 @@ export default function CalendarView({ orders }) {
 					defaultView='month'
 				/>
 			</div>
-			<div className=' p-4'>
+			<div className='p-4 md:col-span-1'>
 				{selectedDate && (
 					<div>
 						<div className='w-full flex'>

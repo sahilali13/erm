@@ -1,9 +1,9 @@
 {
 	"name": "refs-demo-project",
-	"private": false,
+	"private": true,
 	"version": "0.0.0",
 	"type": "module",
-	"homepage": "http://sahilali13.github.io/enterprise-resource-manager",
+	"homepage": "http://sahilali13.github.io/erm",
 	"scripts": {
 		"predeploy": "npm run build",
 		"deploy": "gh-pages -d dist",

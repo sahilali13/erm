@@ -42,7 +42,7 @@ export default function Dashboard() {
 					return (
 						<div
 							key={index}
-							className='bg-stone-200 p-4 rounded-lg h-[17rem]'
+							className='bg-stone-300 p-4 rounded-lg h-[17rem]'
 						>
 							<div className='flex justify-between items-center mb-2'>
 								<h2 className='text-xl font-semibold'>
@@ -57,8 +57,8 @@ export default function Dashboard() {
 										}
 										className='text-sm text-blue-500 focus:outline-none flex items-center'
 									>
-										<Icon className='font-semibold text-xl hover:font-bold hover:text-2xl text-entntblue' />
-										<span className='ml-2'>
+										<Icon className='font-bold text-2xl hover:font-bold hover:text-2xl text-entntblue' />
+										<span className='ml-2 font-semibold text-sm'>
 											{buttonText}
 										</span>
 									</button>
