@@ -116,12 +116,10 @@ export default function ProductMetrics({ showGraph }) {
 				</div>
 			}
 			graph={
-				<div className='max-h-full overflow-auto'>
-					<Pie
-						data={marketShareData}
-						options={marketShareOptions}
-					/>
-				</div>
+				<Pie
+					data={marketShareData}
+					options={marketShareOptions}
+				/>
 			}
 		/>
 	);

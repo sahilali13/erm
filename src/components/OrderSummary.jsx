@@ -37,7 +37,7 @@ export default function OrderSummary({ isOpen, order, onClose }) {
 			>
 				<div className='bg-white rounded-lg shadow-lg w-screen max-w-lg overflow-auto'>
 					<div className='modal-content p-4 overflow-h-auto'>
-						<h2 className='text-lg font-bold mb-4'>
+						<h2 className='text-lg font-bold mb-4 text-entntblue'>
 							Order Details
 						</h2>
 						<table className='w-full mb-4'>
