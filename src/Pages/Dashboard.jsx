@@ -42,7 +42,7 @@ export default function Dashboard() {
 					return (
 						<div
 							key={index}
-							className='bg-stone-300 p-4 rounded-lg h-[17rem]'
+							className='bg-stone-300 p-4 rounded-lg h-[18rem]'
 						>
 							<div className='flex justify-between items-center mb-2'>
 								<h2 className='text-xl font-semibold'>

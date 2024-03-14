@@ -146,7 +146,7 @@ export default function OrdersManagement() {
 	window.addEventListener('resize', updateScreenWidth);
 
 	return (
-		<div className='h-[90vh] p-2  overscroll-none  w-[99vw] m-auto'>
+		<div className='h-[93vh] p-2  overscroll-none  w-[99vw] m-auto'>
 			<div className=' p-2 flex justify-between'>
 				<input
 					type='text'

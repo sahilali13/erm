@@ -71,7 +71,7 @@ export default function ProductsForm({
 	}
 
 	return (
-		<div className=' bg-stone-300 rounded-lg shadow-lg overflow-auto max-h-[83%] min-h-[83%]'>
+		<div className=' bg-stone-200 rounded-lg shadow-lg overflow-auto max-h-[83%] min-h-[83%]'>
 			<form
 				onSubmit={handleFormSubmit}
 				className='max-w-sm mx-auto mt-6 '

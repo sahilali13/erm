@@ -17,7 +17,7 @@ export function Metric({ label, value }) {
 
 export function MetricContent({ showGraph, content, graph }) {
 	return (
-		<div className='bg-white p-4 rounded-lg shadow-md h-[85%] overflow-auto max-w-full'>
+		<div className='bg-stone-200 p-4 rounded-lg shadow-md h-[85%] overflow-auto max-w-full'>
 			{!showGraph && content}
 			{showGraph && graph}
 		</div>

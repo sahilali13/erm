@@ -36,6 +36,11 @@ export default function CalendarView({ orders }) {
 				/>
 			</div>
 			<div className='p-4 md:col-span-1'>
+				{!selectedDate && (
+					<h3 className='mb-2 font-bold text-xl p-1'>
+						No Date Selected
+					</h3>
+				)}
 				{selectedDate && (
 					<div>
 						<div className='w-full flex'>

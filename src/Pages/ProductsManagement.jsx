@@ -131,7 +131,7 @@ export default function ProductsManagement() {
 	));
 
 	return (
-		<div className='h-[90vh] p-2 w-[99vw] m-auto'>
+		<div className='h-[93vh] p-2 w-[99vw] m-auto'>
 			<div className='p-2 pr-2 flex justify-between'>
 				<input
 					type='text'

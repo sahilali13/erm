@@ -88,7 +88,7 @@ export default function OrderMetrics({ showGraph }) {
 						/>
 					</div>
 					<div className='max-h-full overflow-auto'>
-						<h2 className='text-lg font-semibold mb-2 sticky top-0 bg-white'>
+						<h2 className='text-lg font-semibold mb-2 sticky top-0 bg-stone-200'>
 							Backlog
 						</h2>
 						<ul>

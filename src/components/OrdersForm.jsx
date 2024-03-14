@@ -20,7 +20,7 @@ export default function OrdersForm({ handleClose, handleSubmit, initialData }) {
 		shippingAddress,
 		paymentMethod,
 		totalPrice,
-		estimatedDeliveryDate,
+		deliveryDate,
 	} = initialData;
 
 	function handleFormSubmit(e) {
@@ -34,7 +34,7 @@ export default function OrdersForm({ handleClose, handleSubmit, initialData }) {
 			shippingAddress,
 			paymentMethod,
 			totalPrice,
-			estimatedDeliveryDate,
+			deliveryDate,
 		});
 		alert('Product Status Updated');
 	}
@@ -57,7 +57,7 @@ export default function OrdersForm({ handleClose, handleSubmit, initialData }) {
 				/>
 				<FormInputField
 					label='Estimated Delivery Date'
-					value={DateFromTimestamp(estimatedDeliveryDate)}
+					value={DateFromTimestamp(deliveryDate)}
 					type='text'
 					readOnly
 				/>

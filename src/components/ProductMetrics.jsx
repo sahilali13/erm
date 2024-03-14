@@ -92,7 +92,7 @@ export default function ProductMetrics({ showGraph }) {
 			content={
 				<div className='grid grid-cols-2 h-full max-h-[90%]'>
 					<div className='max-h-full overflow-auto'>
-						<h2 className='text-lg font-semibold mb-2 sticky top-0 bg-white'>
+						<h2 className='text-lg font-semibold mb-2 sticky top-0 bg-stone-200'>
 							Best Selling Products
 						</h2>
 						<ul>
@@ -102,7 +102,7 @@ export default function ProductMetrics({ showGraph }) {
 						</ul>
 					</div>
 					<div className='max-h-full overflow-auto'>
-						<h2 className='text-lg font-semibold mb-2 sticky top-0 bg-white'>
+						<h2 className='text-lg font-semibold mb-2 sticky top-0 bg-stone-200'>
 							Inventory Alert
 						</h2>
 						<ul>
