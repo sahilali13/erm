@@ -1,10 +1,13 @@
 import { Link, useLocation } from 'react-router-dom';
 
+import { FaHome } from 'react-icons/fa';
+
 import { Header } from '../widgets/GeneralWidgets';
 
 export default function Navigation() {
 	const location = useLocation();
-	const tabCss = 'text-gray-50 hover:text-gray-200 font-medium text-xl';
+	const tabCss =
+		'flex text-gray-50 hover:text-gray-200 font-medium text-xl hover:font-semibold';
 	return (
 		<nav className='flex justify-between items-center py-4 px-8 bg-entntblue rounded-bl-3xl rounded-br-3xl'>
 			{location.pathname == '/' && <Header heading='Dashboard' />}
@@ -21,6 +24,9 @@ export default function Navigation() {
 							to='/'
 							className={tabCss}
 						>
+							<span className='mt-1 mr-1'>
+								<FaHome />
+							</span>
 							Dashboard
 						</Link>
 					</li>

@@ -68,7 +68,7 @@ export function OrderDetailRow({ label, value }) {
 			<td className='pr-2'>
 				<strong>{label}</strong>
 			</td>
-			<td>
+			<td className='flex gap-2'>
 				{label === 'Total Price' && '₹'}
 				{value}
 			</td>

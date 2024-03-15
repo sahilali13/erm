@@ -1,10 +1,15 @@
+import { useState } from 'react';
+
+import { IoMdEye } from 'react-icons/io';
+
 import { CUSTOMERS, INITIAL_PRODUCTS } from '../assets/Data';
-
+import CustomerSummary from './CustomerSummary';
 import DateFromTimestamp from '../helpers/DateFromTimestamp';
-
 import { OrderDetailRow } from '../widgets/TableWidgets';
 
 export default function OrderSummary({ isOpen, order, onClose }) {
+	const [showCustomerInfoModal, setShowCustomerInfoModal] = useState(false);
+
 	if (!isOpen) return null;
 
 	function renderOrderDetailRow(label, value) {
@@ -28,6 +33,10 @@ export default function OrderSummary({ isOpen, order, onClose }) {
 		return product ? product.name : 'Unknown Product';
 	}
 
+	function handleViewCustomerInfo() {
+		setShowCustomerInfoModal(true);
+	}
+
 	return (
 		<>
 			<div className='fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90'></div>
@@ -45,7 +54,17 @@ export default function OrderSummary({ isOpen, order, onClose }) {
 								{renderOrderDetailRow('Order ID', order.id)}
 								{renderOrderDetailRow(
 									'Customer Name',
-									getCustomerName(order.customerID)
+									<>
+										{getCustomerName(order.customerID)}{' '}
+										<div className='mt-1'>
+											<button
+												onClick={handleViewCustomerInfo}
+												className='text-entntblue text-lg'
+											>
+												<IoMdEye />
+											</button>
+										</div>
+									</>
 								)}
 								{renderOrderDetailRow(
 									'Order Date',
@@ -91,6 +110,12 @@ export default function OrderSummary({ isOpen, order, onClose }) {
 					</div>
 				</div>
 			</dialog>
+			{showCustomerInfoModal && (
+				<CustomerSummary
+					customerID={order.customerID}
+					onClose={() => setShowCustomerInfoModal(false)}
+				/>
+			)}
 		</>
 	);
 }

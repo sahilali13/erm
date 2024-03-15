@@ -18,7 +18,7 @@ This project is a simplified interface for an ERP (Enterprise Resource Planning)
 ### Orders Management
 
 -   List and Sort orders with details like order ID, customer name, order date, and status.
--   View order details, update order status, and delete orders.
+-   View order and customer details, update order status, and delete orders.
 -   Search for a specific product name.
 -   Calendar view displaying orders based on their expected delivery dates.
 -   Click on a date to view all orders due for delivery that day.
